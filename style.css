@@ -1,16 +1,15 @@
-/* Reset some default styles */
-body, h1, h2, p {
+*{
     margin: 0;
     padding: 0;
 }
 
-/* Global Styles */
 body {
     font-family: Arial, sans-serif;
-    background-image: url('paper-texture.jpg'); /* Replace with your paper texture image */
+    margin: 0;
+    padding: 0;
+    background-image: url('assects/paper-texture.jpg'); 
     background-size: cover;
 }
-
 header {
     color: #fff;
     padding: 10px 0;
@@ -27,20 +26,20 @@ nav ul {
 
 nav li {
     margin: 0 5px;
-    color: black; /* Set text color to black */
+    color: black; 
     font-weight: bold;
     font-size: 14px;
 }
 
 nav a {
     text-decoration: none;
-    color: black; /* Set text color to black */
-    transition: color 0.3s, font-weight 0.3s; /* Add font-weight transition */
+    color: black; 
+    transition: color 0.3s, font-weight 0.3s; 
 }
 
 nav a:hover {
     color: #f00;
-    font-weight: 600; /* Increase font-weight on hover */
+    font-weight: 600; 
 }
 
 section {
@@ -48,13 +47,6 @@ section {
     text-align: center;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-image: url('paper-texture.jpg'); /* Replace with your paper texture image */
-    background-size: cover;
-}
 .hire-button {
     background-color: black;
     color: white;
@@ -62,16 +54,18 @@ body {
     padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.3s;
+
 }
 
 .hire-button:hover {
     background-color: #333;
 }
+
 .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start; /* Adjust the alignment as needed */
+    align-items: flex-start; 
     height: 100vh;
     margin: 0 0 0 50px;
 }
@@ -79,8 +73,8 @@ body {
 .typing-text {
     font-size: 60px;
     color: black;
-    text-align: left; /* Align the text to the left */
-    margin-bottom: 20px; /* Add some space between text and button */
+    text-align: left; 
+    margin-bottom: 20px; 
 }
 
 #typed-text {
@@ -116,23 +110,23 @@ body {
 
 @media (max-width: 768px) {
     .container {
-        align-items: center; /* Center items vertically on smaller screens */
-        padding: 20px; /* Add some padding around the container */
+        align-items: center; 
+        padding: 20px; 
     }
 
     .typing-text {
-        font-size: 30px; /* Decrease font size for smaller screens */
-        text-align: center; /* Center the text on smaller screens */
-        margin-bottom: 10px; /* Reduce margin for spacing */
+        font-size: 30px; 
+        text-align: center; 
+        margin-bottom: 10px; 
     }
 
     #cursor {
-        display: none; /* Hide the cursor on smaller screens */
+        display: none; 
     }
 
     .hire-button {
-        font-size: calc(30px - 4px); /* Decrease button font size */
-        padding: 8px 15px; /* Adjust button padding */
+        font-size: calc(30px - 4px); 
+        padding: 8px 15px; 
     }
     .menu-icon {
         display: flex;

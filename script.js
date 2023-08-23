@@ -1,7 +1,7 @@
 const typedText = document.getElementById('typed-text');
 const cursor = document.getElementById('cursor');
 
-const texts = ['Bayya Reddy','freelancer', 'developer']; // Array of text options
+const texts = ['Bayya Reddy','A Freelancer', 'A Developer']; 
 let textIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
@@ -27,12 +27,12 @@ function type() {
         textIndex = (textIndex + 1) % texts.length;
     }
 
-    setTimeout(type, isDeleting ? 50 : 200); // Adjust typing and backspacing speed
+    setTimeout(type, isDeleting ? 50 : 200); 
 }
 
-type(); // Start the typing animation
+type(); 
 
-// Blink the cursor
+
 setInterval(() => {
     cursor.style.opacity = cursor.style.opacity === '0' ? '1' : '0';
 }, 500);
