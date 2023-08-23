@@ -1,0 +1,164 @@
+/* Reset some default styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('paper-texture.jpg'); /* Replace with your paper texture image */
+    background-size: cover;
+}
+
+header {
+    color: #fff;
+    padding: 10px 0;
+    text-align: right;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+nav li {
+    margin: 0 5px;
+    color: black; /* Set text color to black */
+    font-weight: bold;
+    font-size: 14px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black; /* Set text color to black */
+    transition: color 0.3s, font-weight 0.3s; /* Add font-weight transition */
+}
+
+nav a:hover {
+    color: #f00;
+    font-weight: 600; /* Increase font-weight on hover */
+}
+
+section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('paper-texture.jpg'); /* Replace with your paper texture image */
+    background-size: cover;
+}
+.hire-button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hire-button:hover {
+    background-color: #333;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Adjust the alignment as needed */
+    height: 100vh;
+    margin: 0 0 0 50px;
+}
+
+.typing-text {
+    font-size: 60px;
+    color: black;
+    text-align: left; /* Align the text to the left */
+    margin-bottom: 20px; /* Add some space between text and button */
+}
+
+#typed-text {
+    display: inline-block;
+}
+
+#cursor {
+    display: inline-block;
+    animation: blink-animation 0.5s infinite;
+}
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 3px 0;
+}
+@keyframes blink-animation {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+/* Previous styles */
+
+@media (max-width: 768px) {
+    .container {
+        align-items: center; /* Center items vertically on smaller screens */
+        padding: 20px; /* Add some padding around the container */
+    }
+
+    .typing-text {
+        font-size: 30px; /* Decrease font size for smaller screens */
+        text-align: center; /* Center the text on smaller screens */
+        margin-bottom: 10px; /* Reduce margin for spacing */
+    }
+
+    #cursor {
+        display: none; /* Hide the cursor on smaller screens */
+    }
+
+    .hire-button {
+        font-size: calc(30px - 4px); /* Decrease button font size */
+        padding: 8px 15px; /* Adjust button padding */
+    }
+    .menu-icon {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #f0f0f0;
+        position: absolute;
+        width: 100%;
+        top: 60px;
+        left: 0;
+        z-index: 1;
+        transition: transform;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+    .separator{
+        display: none;
+    }
+}
