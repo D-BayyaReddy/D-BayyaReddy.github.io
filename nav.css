@@ -34,10 +34,3 @@ nav a:hover {
     color: #f00;
     font-weight: 600; 
 }
-
-nav{
-    position: fixed;
-    top: 0;
-    right: 0;
-    
-}
