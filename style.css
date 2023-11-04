@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "Mabry Pro black";
+    src: url(./assects/fonts/MabryPro-Black.ttf) format(truetype);
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    background: #303030;
+    font-family: "Mabry Pro black";
+    width: 100%;
+    height: 100%;
+}
+h1{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+h1:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    
+}
