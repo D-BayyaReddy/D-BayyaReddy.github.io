@@ -1,4 +1,4 @@
-# Interactive Full-Stack Developer Portfolio | Bayya Reddy Danduri
+# Interactive Full-Stack Developer Portfolio | Bayya Reddy Danduri.
 
 A premium, highly animated developer portfolio built using React, Next.js (App Router), Tailwind CSS, Framer Motion, and React Three Fiber (Three.js).
 
