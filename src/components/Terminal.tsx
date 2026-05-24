@@ -36,9 +36,9 @@ const Terminal: React.FC = () => {
   - <span class="text-primary font-bold">Seamless Player</span>: Streaming Application (HTML5, Tailwind, JS, API)
   - <span class="text-primary font-bold">Flutter E-Commerce</span>: Cross-platform store application (Firebase, Dart)`,
     contact: `Let's Build Something:
-  - <span class="text-primary font-bold">Email</span>: bayyareddy.d@example.com
+  - <span class="text-primary font-bold">Email</span>: bayyareddydanduri@gmail.com
   - <span class="text-primary font-bold">GitHub</span>: github.com/D-BayyaReddy
-  - <span class="text-primary font-bold">Location</span>: Bengaluru, India`,
+  - <span class="text-primary font-bold">Location</span>: Tirupati, Andhra Pradesh`,
     secret: `🔑 ACCESS GRANTED: SECRET UNLOCKED!
   Enjoy a celebratory shower of sparks! Keep building great software. 🚀`
   };

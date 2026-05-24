@@ -59,6 +59,8 @@ const Footer: React.FC = () => {
           <a href="#skills" className="hover:text-primary transition-colors">Skills</a>
           <a href="#projects" className="hover:text-primary transition-colors">Projects</a>
           <a href="#experience" className="hover:text-primary transition-colors">Experience</a>
+          <a href="#education" className="hover:text-primary transition-colors">Education</a>
+          <a href="#github" className="hover:text-primary transition-colors">GitHub</a>
           <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
         </div>
 
@@ -84,7 +86,7 @@ const Footer: React.FC = () => {
               <LinkedinIcon className="w-[15px] h-[15px]" />
             </a>
             <a
-              href="mailto:bayyareddy.d@example.com"
+              href="mailto:bayyareddydanduri@gmail.com"
               className="p-2.5 rounded-full border border-border-custom bg-card-custom text-text-muted hover:text-foreground hover:border-primary transition-all duration-200"
               aria-label="Email Contact"
             >

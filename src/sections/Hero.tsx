@@ -186,7 +186,7 @@ const Hero: React.FC = () => {
               <LinkedinIcon className="w-[18px] h-[18px]" />
             </a>
             <a
-              href="mailto:bayyareddy.d@example.com"
+              href="mailto:bayyareddydanduri@gmail.com"
               className="p-3 rounded-full border border-border-custom bg-card-custom text-text-muted hover:text-foreground hover:border-primary transition-all duration-200"
               aria-label="Email Contact"
             >

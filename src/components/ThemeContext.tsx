@@ -1,8 +1,8 @@
 "use client";
 
-import React, { createContext, useContext, useEffect, useState } from "react";
+import React, { createContext, useContext, useEffect } from "react";
 
-type Theme = "light" | "dark";
+type Theme = "dark";
 
 interface ThemeContextType {
   theme: Theme;
@@ -12,33 +12,16 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [theme, setTheme] = useState<Theme>("dark"); // Default to dark mode
-
-  useEffect(() => {
-    // Check local storage or system preference
-    const savedTheme = localStorage.getItem("portfolio-theme") as Theme | null;
-    if (savedTheme) {
-      setTheme(savedTheme);
-    } else {
-      const systemPreference = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
-      setTheme(systemPreference);
-    }
-  }, []);
+  const theme: Theme = "dark";
 
   useEffect(() => {
     const root = window.document.documentElement;
-    if (theme === "dark") {
-      root.classList.add("dark");
-      root.classList.remove("light");
-    } else {
-      root.classList.add("light");
-      root.classList.remove("dark");
-    }
-    localStorage.setItem("portfolio-theme", theme);
-  }, [theme]);
+    root.classList.add("dark");
+    root.classList.remove("light");
+  }, []);
 
   const toggleTheme = () => {
-    setTheme((prev) => (prev === "dark" ? "light" : "dark"));
+    // Permanent dark mode, toggle is a no-op
   };
 
   return (

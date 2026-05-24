@@ -18,27 +18,58 @@ const Contact: React.FC = () => {
     if (!name || !email || !message) return;
 
     setIsSubmitting(true);
-    
-    // Simulate API delivery
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSuccess(true);
-      
-      // Trigger a beautiful burst of confetti!
-      confetti({
-        particleCount: 150,
-        spread: 80,
-        origin: { y: 0.6 },
-        colors: ["#8b5cf6", "#06b6d4", "#ec4899"]
+
+    const emailjs = (window as any).emailjs;
+    if (emailjs) {
+      emailjs.send("service_o40gvmx", "template_i7k00wh", {
+        from_name: name,
+        from_email: email,
+        message: message,
+      })
+      .then(() => {
+        setIsSubmitting(false);
+        setSuccess(true);
+        
+        // Trigger a beautiful burst of confetti!
+        confetti({
+          particleCount: 150,
+          spread: 80,
+          origin: { y: 0.6 },
+          colors: ["#8b5cf6", "#06b6d4", "#ec4899"]
+        });
+
+        // Reset
+        setName("");
+        setEmail("");
+        setMessage("");
+
+        setTimeout(() => setSuccess(false), 5000);
+      })
+      .catch((err: any) => {
+        console.error("EmailJS Error:", err);
+        setIsSubmitting(false);
+        alert("Failed to send message via EmailJS. Please try again or email directly.");
       });
+    } else {
+      // Fallback simulation if script fails to load
+      setTimeout(() => {
+        setIsSubmitting(false);
+        setSuccess(true);
+        
+        confetti({
+          particleCount: 150,
+          spread: 80,
+          origin: { y: 0.6 },
+          colors: ["#8b5cf6", "#06b6d4", "#ec4899"]
+        });
 
-      // Reset
-      setName("");
-      setEmail("");
-      setMessage("");
+        setName("");
+        setEmail("");
+        setMessage("");
 
-      setTimeout(() => setSuccess(false), 5000);
-    }, 1200);
+        setTimeout(() => setSuccess(false), 5000);
+      }, 1000);
+    }
   };
 
   const handleMouseMove = (e: React.MouseEvent<HTMLFormElement>) => {
@@ -98,8 +129,8 @@ const Contact: React.FC = () => {
                 </div>
                 <div className="text-xs">
                   <span className="text-text-muted block font-mono">EMAIL</span>
-                  <a href="mailto:bayyareddy.d@example.com" className="font-semibold hover:text-primary transition-colors">
-                    bayyareddy.d@example.com
+                  <a href="mailto:bayyareddydanduri@gmail.com" className="font-semibold hover:text-primary transition-colors">
+                    bayyareddydanduri@gmail.com
                   </a>
                 </div>
               </div>
@@ -109,7 +140,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div className="text-xs">
                   <span className="text-text-muted block font-mono">LOCATION</span>
-                  <span className="font-semibold">Bengaluru, India</span>
+                  <span className="font-semibold">Tirupati, Andhra Pradesh</span>
                 </div>
               </div>
             </div>
