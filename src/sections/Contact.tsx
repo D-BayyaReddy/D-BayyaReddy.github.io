@@ -25,7 +25,7 @@ const Contact: React.FC = () => {
         from_name: name,
         from_email: email,
         message: message,
-      })
+      }, "XQxW2NBL5iYRHYSvU")
       .then(() => {
         setIsSubmitting(false);
         setSuccess(true);
