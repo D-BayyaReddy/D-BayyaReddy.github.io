@@ -108,6 +108,31 @@ const projectsList: Project[] = [
       "I/flutter ( 4235): [TEST] Executing test spec: 'fetchProducts succeeds' - PASSED",
       "I/flutter ( 4235): Device viewport pixel ratio configured."
     ]
+  },
+  {
+    id: "beatx",
+    title: "BeatX",
+    subtitle: "Premium UI Ad-Free Music Player",
+    desc: "A premium music player application designed with a focus on immersive visuals, a glassmorphic UI, and an ad-free user listening experience.",
+    tags: ["HTML5", "CSS3", "JavaScript", "GSAP", "Tailwind CSS"],
+    github: "https://github.com/D-BayyaReddy/SeamlessPlayer",
+    live: "/projects/beatx.html",
+    accent: "from-blue-500 to-cyan-500",
+    icon: "music",
+    features: [
+      "Premium ad-free audio streaming and local playback experience.",
+      "Stunning adaptive glassmorphic UI matching album artwork palette.",
+      "Immersive 'Now Playing' visualizer with synchronized lyrics support.",
+      "Available for download on Windows, macOS, and Linux platforms."
+    ],
+    mockupTitle: "BeatX Client Engine",
+    mockupLines: [
+      "[SYSTEM] Loading BeatX Core Interface...",
+      "[THEME] Initializing glassmorphic shader palette...",
+      "[AD-BLOCK] Ad-free shield initialized successfully.",
+      "[PLAYBACK] Buffering high-quality audio stream (320kbps)...",
+      "[UI] Rendered responsive viewport layout."
+    ]
   }
 ];
 
@@ -147,7 +172,7 @@ const Projects: React.FC = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projectsList.map((project, idx) => (
             <motion.div
               key={project.id}
